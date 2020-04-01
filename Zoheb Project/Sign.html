@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> SIGN IN </title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script>
+function f1() {
+var n=document.f.t1.value;
+var d=document.f.t2.value;
+var s=document.f.t3.value;
+var a=document.f.t4.value;
+var b=document.f.t5.value;
+
+if( n=="" || d=="" || s=="" || a=="" || b=="") {
+alert("Please Fill All The Details Or Try Again Later");
+}
+
+var r1=/^[A-Z]{1}[a-z]{1,15}\s[A-Z]{1}[a-z]{1,15}\s[A-z]{1}[a-z]{1,15}$/;
+if(r1.test(n)==false) { alert("Please Enter Valid Name ( Fn Mn Ln ) "); }
+
+var r2=/^[7-9]\d{9}$/;
+if(r2.test(d)==false) { alert("Please Enter Valid Contact (Eg: 9885659567) "); }
+
+var r3=/^[0-9]\d{9}$/;
+if(r3.test(s)==false) { alert("Please Enter Valid MI Account Number (It Should Contain 10 Digit Number) "); }
+
+var r4=/^\w+@\w+\.\w+$/;
+if(r4.test(a)==false) { alert("Please Enter Valid Email (Eg: john2@yahoo.com) "); }
+
+var r5=/^\w{1,100}$/;
+if(r5.test(b)==false) { alert("Please Enter Valid FeedBack (Character Less Than 100 Characters  ) "); }
+
+if((r1.test(n)==true) && (r2.test(d)==true) && (r3.test(s)==true) && (r4.test(a)==true) && (r5.test(b)==true) ) { alert(" Thank You ");}  
+}
+</script>
+</head>
+<body>
+<ul class="nav">
+ <li><a href="Sign.html">Sign In</a></li> 
+<li><a href="Mi.html"> MI Phones </a></li>
+<li><a href="Redmi.html">Redmi Phones</a></li>
+<li><a href="About.html">About</a></li>
+<li><a href="Home.html">Home</a></li>
+ <li class="xiaomi"> 
+<img src="xiaomi.png" height=50px width=50px style="margin-bottom: 55px;margin-top: -6px"> 
+<div style="margin-top:-90px; margin-left:80px">XIAOMI </div></li>
+</ul>
+<div class="con"><br>
+<div style="margin-left: 700px; margin-top: 130px; margin-bottom: -100px; height: 20px"><img src="phone1.jpg" width="55%">
+</div><br>
+<div style="margin-left: 500px; margin-top: 290px; margin-bottom: -390px; height: 30px">
+<p style="color: white; font-size: 17px; font-family: helvetica"> <b> <i> “HOME is where the heart is, but today, the PHONE is where the Heart is!!!” 
+- Rachitha Cabral </i> </b>  </p>
+</div>
+<form name="f">
+<input type="text" placeholder="Enter Your Name " name="t1">
+<input type="text" placeholder="Enter Your Contact Number" name="t2">
+<input type="text" placeholder="Eter Your MI Account ID " name="t3">
+<input type="text" placeholder= "Enter Your Email Address "name="t4">
+<input type="text" placeholder=" Write Something " name="t5">
+<input class="b" type="button" value="SUBMIT" onclick="f1()">
+</form>
+</div>
+
+</body>
+</html>

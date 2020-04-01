@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+Main
+</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script>
+var arr= ["note7banner.jpg","mia3banner.jpg","mi9Tbanner.jpg","mimixbanner.jpg"];
+var c=0;
+function f1(){
+	document.img.src = arr[c]; c++;
+	if(c==arr.length){
+		c=0;
+	}
+	setTimeout(f1,3000);
+}
+window.onload=f1;
+</script>
+</head>
+<body>
+<ul class="nav">
+<li><a href="Sign.html">Sign In </a></li> 
+<li><a href="Mi.html"> MI Phones </a></li>
+<li><a href="Redmi.html">Redmi Phones</a></li>
+<li><a href="About.html">About</a></li>
+<li><a  href="Home.html">Home</a></li>
+ <li class="xiaomi"> 
+<img src="xiaomi.png" height=50px width=50px style="margin-bottom: 55px;margin-top: -6px">
+ <div style="margin-top:-90px; margin-left:80px"> XIAOMI </div> </li>
+</ul>
+<img name="img" width="100%" height="93%">
+</body>
+</html>
